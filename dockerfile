@@ -8,7 +8,7 @@ RUN apt install ./apt-ntop.deb
 RUN rm -rf apt-ntop.deb
 
 RUN apt-get update
-RUN apt-get -y -q install ntopng redis-server libpcap0.8 libmysqlclient18
+RUN apt-get -y -q install ntopng ntopng-data redis-server libpcap0.8 libmysqlclient18 tzdata
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
